@@ -1,0 +1,41 @@
+#Este archivo es ara que cuando se solicite un archivo que no existe, se redirecciona a index.php
+
+Options -Indexes
+DirectoryIndex inicioApiRest.php
+#Redirect inicioApiRest.php https://softfarr.ddns.net
+
+RewriteEngine On
+
+# Estas lineas son para quitar la ext .php
+#
+# %{REQUEST_FILENAME} es una variable establecida por el servidor
+# para contener la URL de la solicitud,
+# no solo un nombre de archivo como puede aparecer.
+#
+# El ! niega la bandera.
+#
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#
+# La bandera -f significa que la condición es verdadera
+# si el primer argumento se resuelve en un archivo válido.
+#
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php 
+
+# Estas lineas son para quitar la ext .html
+#
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
+
+# Si la ruta no es un archivo existente, ni una carpeta,
+# redirige al index.php
+#
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+?)/?$ inicioApiRest.php?url=$1 [L,QSA]
