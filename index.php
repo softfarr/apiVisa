@@ -219,7 +219,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading4">
                         <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            Reversal Information
+                            Reversal/Refund Information
                         </button>
                     </h2>
                     <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4">
@@ -275,7 +275,7 @@
                             </div>
                             <iframe width="225" height="127" src="https://www.youtube.com/embed/Z1RaZhp7DYQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="radioOpcion" id="radioOpcion4" value=4 disabled>
+                                <input class="form-check-input" type="radio" name="radioOpcion" id="radioOpcion4" value=4>
                                 <label class="form-check-label" for="radioOpcion4">
                                     <?php
                                     $textoOpcion = "4. One authorization credit (refund)";
