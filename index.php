@@ -106,7 +106,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="heading2">
                         <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            Billing Information
+                            Billing/Reversal/Refund Information
                         </button>
                     </h2>
                     <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2">
